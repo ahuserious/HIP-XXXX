@@ -63,7 +63,7 @@ The U.S. federal government has invested billions in initiatives like the [Rural
 In underserved areas, local control over network infrastructure is vital to expanding coverage. However, [HIP 0113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md)’s centralization restricts this reducing the ability of rural communities to leverage the Helium network for affordable, decentralized last-mile connectivity. By imposing top-down control over wireless validation and network management, [HIP 0113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) makes it difficult for rural areas to independently build and manage wireless infrastructure that could benefit from federal broadband grants and funding programs.
 
 ### 6. Federal Broadband Funding Expects Decentralized, Community-Driven Solutions
-Many federal programs, such as [[USDA's Reconnect Program]](https://www.usda.gov/reconnect) and [NTIA’s Broadband Infrastructure Program](https://broadbandusa.ntia.doc.gov/broadband-infrastructure-program), aim to empower local stakeholders, including citizens, cooperatives, and municipalities, to develop broadband solutions tailored to their communities. ['HIP 0113's'](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) centralized approach to network management and verification discourages local involvement, thus making Helium ineligible or unsuitable for participation in such programs, where decentralized, community-driven solutions are explicitly encouraged. This failure to align with federal objectives limits Helium's potential to play a major role in these broadband expansion efforts.
+Many federal programs, such as [[USDA's Reconnect Program]](https://www.usda.gov/reconnect) and [NTIA’s Broadband Infrastructure Program](https://broadbandusa.ntia.doc.gov/broadband-infrastructure-program), aim to empower local stakeholders, including citizens, cooperatives, and municipalities, to develop broadband solutions tailored to their communities. [HIP 0113's](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) centralized approach to network management and verification discourages local involvement, thus making Helium ineligible or unsuitable for participation in such programs, where decentralized, community-driven solutions are explicitly encouraged. This failure to align with federal objectives limits Helium's potential to play a major role in these broadband expansion efforts.
 
 ### 7. Limiting CBRS Deployers from Using their Own SAS
 The U.S. federal government has invested billions in initiatives like the Rural Digital Opportunity Fund (RDOF) and the Broadband Equity, Access, and Deployment (BEAD) program, specifically aimed at closing the digital divide in rural and underserved areas. [HIP 0113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) runs counter to these efforts by centralizing network control, stifling innovation, and excluding community-based participation. The shift away from decentralized PoC disproportionately impacts rural deployments, which benefit most from community-driven wireless infrastructure due to the unique challenges of last-mile connectivity.
@@ -73,24 +73,25 @@ By centralizing control and excluding community-driven participation, [HIP 0113]
 
 ## This proposal outlines key changes aimed at enhancing network stability, security, and efficiency:
 ### Reverse the POC Rewards Rebalancing - outlined in [HIP 0113](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) 
-### EXAMPLE - HIP 0113 PROPOSED:: 
-#### Current Rewards
-|:------:|:COVERAGE POINTS :|:MOBILE REWARDS :| :% TOTAL:|
-|:CBRS:  | :26,199,967:     |:36,756,229:     |:75.5%:   |
-|:WiFi:  |:8,492,786:       |:11,916,220:     |:24.5%:   |
-|:Total: |:34,692,753:      |:48,672,449      |:100.0%:  |
-
-#### Proposed Rewards
-|:------:|:COVERAGE POINTS :|:MOBILE REWARDS :| :% TOTAL:| :% CHANGE: |
-|:CBRS:  |:6,549,992:-------|:36,756,229:     |:43.5%:   |:-42.3%:    |
-|:WiFi:  |:8,492,786:-------|:11,916,220:     |:56.5%:   |:+130.6%:   |
-|:Total: |:15,042,778:------|:48,672,449:     |:100.0%:  |:0%:        |
-
-### Proposed Reversal *Retroactive
-|:------:|:COVERAGE POINTS :|:MOBILE REWARDS :| :% TOTAL:| :% CHANGE: |
-|:CBRS:  |:26,199,967:      |:36,756,229:     |:75.5%:   |:+42.3%:    |
-|:WiFi:  |:8,492,786:       |:11,916,220:     |:24.5%:   |:-130.6%:   |
-|:Total: |:34,692,753:      |:48,672,449      |:100.0%:  |:0%:        |
+### EXAMPLE - HIP 0113 Proposed:: 
+#### Current rewards
+|               | Coverage Points (current) | MOBILE Rewards (current)   | % Total Rewards |
+| ------------- | ------------------------- | -------------------------- | --------------- |
+| CBRS          | 26,199,967                | 36,756,229                 | 75.5%           |
+| Wi-Fi         | 8,492,786                 | 11,916,220                 | 24.5%           |
+| Total         | 34,692,753                | 48,672,449                 | 100.0%          |
+#### Proposed Rewards (estimated)
+|               | Coverage Points (estimated) | MOBILE Rewards (estimated) | % Total Rewards | MOBILE Rewards Change   |
+| ------------- | --------------------------- | -------------------------- | --------------- | ----------------------- |
+| CBRS          | 6,549,992                   | 21,193,170                 | 43.5%           | **-42.3%**              |
+| Wi-Fi         | 8,492,786                   | 27,479,279                 | 56.5%           | **+130.6%**             |
+| Total         | 15,042,778                  | 48,672,449                 | 100%            |                         |
+### Proposed Reversal by this HIP  *Retroactive to HIP 0113 date*
+|               | Coverage Points (estimated) | MOBILE Rewards (estimated) | % Total Rewards | MOBILE Rewards Change   |
+| ------------- | --------------------------- | -------------------------- | --------------- | ----------------------- |
+| CBRS          | 6,549,992                   | 21,193,170                 | 43.5%           | **+42.3%**              |
+| Wi-Fi         | 8,492,786                   | 27,479,279                 | 56.5%           | **-130.6%**             |
+| Total         | 15,042,778                  | 48,672,449                 | 100%            |                         |
 
 ### Reintroduce PoC Validation: 
 Return to the original system where hotspots are responsible for verifying coverage using peer-to-peer signal validation. This could be implemented with a weighted reward system that prioritizes rural deployments where connectivity is most needed. This system will adjust PoC rewards to provide greater incentives for CBRS radios deployed in underserved rural areas. Deployments in densely populated urban areas will be scrutinized for potential manipulation and may receive adjusted rewards accordingly, ensuring fairness and discouraging exploitative practices.
@@ -166,5 +167,5 @@ To evaluate the success of this proposal, we will monitor the following metrics:
 [HIP 0113's](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) centralization of wireless validation and restriction on citizen-driven wireless innovation runs counter to the goals of the CBRS model. If Helium is to truly democratize wireless access, it must reverse [HIP 0113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md), allow SIM providers to provision devices on the network freely, and give CBRS deployers control over their own SAS systems. This proposal calls for a restoration of decentralization and citizen empowerment in line with the original mission of Helium and the principles of CBRS.
 
 
-[IMAGE GALLERY](https://imgur.com/a/hip-113-implications-zCcXIHY)
+[Imgur galleries](https://imgur.com/user/prtysrss/posts)
 
