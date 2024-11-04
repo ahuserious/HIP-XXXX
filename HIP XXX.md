@@ -167,5 +167,4 @@ To evaluate the success of this proposal, we will monitor the following metrics:
 [HIP 0113's](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) centralization of wireless validation and restriction on citizen-driven wireless innovation runs counter to the goals of the CBRS model. If Helium is to truly democratize wireless access, it must reverse [HIP 0113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md), allow SIM providers to provision devices on the network freely, and give CBRS deployers control over their own SAS systems. This proposal calls for a restoration of decentralization and citizen empowerment in line with the original mission of Helium and the principles of CBRS.
 
 
-[Imgur galleries](https://imgur.com/user/prtysrss/posts)
 
