@@ -15,16 +15,16 @@ This HIP introduces a multi-faceted strategy to protect investments in Citizen B
 ## Motivation 
 
 ### CBRS gateways and radios have been the main way to deploy mobile coverage since the beginning of the Helium 5G network.
- CBRS was portrayed in [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) to be impractical and substantially changed coverage points, and, [HIP 93](https://github.com/helium/HIP/issues/754) introduced Wi-Fi Access Points (APs), which do provide some coverage within 800 feet, but with the short range of connectivity, it far from solves the challenges of long range 5G connectivity. CBRS radios' longer range and ease of deployment can extend into the last mile and add to existing mobile network coverage, especially in rural areas, where coverage is needed most.  CBRS radio represents significant investments by network participants, and there is a need to align their deployments with the mission of democratizing the citizen band spectrum. The current PoC reward system has imbalances that are vulnerable to exploitation, leading to disproportionate rewards for certain setups while under-rewarding legitimate deployments. By introducing multi-carrier support and data offloading mechanisms, we aim to enhance network reliability and utility, particularly in rural areas where connectivity challenges are most acute.
+ CBRS was portrayed in [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) to be impractical and substantially changed coverage points, and, [HIP 93](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) introduced Wi-Fi Access Points (APs), which do provide some coverage within 800 feet, but with the short range of connectivity, it far from solves the challenges of long range 5G connectivity. CBRS radios' longer range and ease of deployment can extend into the last mile and add to existing mobile network coverage, especially in rural areas, where coverage is needed most.  CBRS radio represents significant investments by network participants, and there is a need to align their deployments with the mission of democratizing the citizen band spectrum. The current PoC reward system has imbalances that are vulnerable to exploitation, leading to disproportionate rewards for certain setups while under-rewarding legitimate deployments. By introducing multi-carrier support and data offloading mechanisms, we aim to enhance network reliability and utility, particularly in rural areas where connectivity challenges are most acute.
 ## Explorer stats compared by timeframe
 Presented below are helium network stats via [moken.io explorer](https://explorer.moken.io/network-stats/detailed). 
-### Pre HIP 0113
+### Pre [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md)
 - [Hotspots](https://imgur.com/oeU6ZTg)
 - [Cells](https://imgur.com/LtAi4ld)
 - [Cell Types](https://imgur.com/75Y8Rq6)
 - [Rewarded Cells by Manufacturer](https://imgur.com/PBpp1As)
 - [Mobile Data](https://imgur.com/XRrIEgN)
-### Post HIP 0113
+### Post [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md)
 - [Hotspots](https://imgur.com/83enfQ2)
 - [Cells](https://imgur.com/GilH5iJ)
 - [Cell Types](https://imgur.com/NXd2LtL)
@@ -42,9 +42,9 @@ The chronology of 7 months prior to and since the passing of [HIP 0113](https://
 - **Helium Community:** The broader network participants are affected by changes in network utility and PoC reward distribution.
 
 ### Concept Introduction
-The Citizen Broadband Radio Service (CBRS) was created to decentralize and democratize access to wireless spectrum, allowing citizens and businesses to manage their own networks. However, [HIP 0113](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md), with its centralization of Proof of Coverage (PoC) and Oracle-based verification, directly contradicts these principles. More critically, it undermines the significant efforts of the federal government to bridge the digital divide by expanding rural and last-mile connectivity. This proposal argues that [HIP 0113](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) is not only counterproductive to the CBRS citizen-first model but also actively works against federal initiatives to increase wireless access, particularly in underserved areas.
+The Citizen Broadband Radio Service (CBRS) was created to decentralize and democratize access to wireless spectrum, allowing citizens and businesses to manage their own networks. However, [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md), with its centralization of Proof of Coverage (PoC) and Oracle-based verification, directly contradicts these principles. More critically, it undermines the significant efforts of the federal government to bridge the digital divide by expanding rural and last-mile connectivity. This proposal argues that [HIP 0113](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) is not only counterproductive to the CBRS citizen-first model but also actively works against federal initiatives to increase wireless access, particularly in underserved areas.
 
-[HIP 0113's](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) centralization of network control and its exclusionary practices—such as limiting SIM providers and restricting CBRS deployers from using their own Spectrum Access Systems (SAS)—represent a backward step in democratizing wireless access. By maintaining this centralized approach, Helium is essentially a “dagger in the back” of ongoing government efforts to provide funding and resources to enhance connectivity in rural and marginalized areas, and for the United States of America to become a global leader in Open RAN – areas that Helium could otherwise help to serve.
+[HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) centralization of network control and its exclusionary practices—such as limiting SIM providers and restricting CBRS deployers from using their own Spectrum Access Systems (SAS)—represent a backward step in democratizing wireless access. By maintaining this centralized approach, Helium is essentially a “dagger in the back” of ongoing government efforts to provide funding and resources to enhance connectivity in rural and marginalized areas, and for the United States of America to become a global leader in Open RAN – areas that Helium could otherwise help to serve.
 
 ## Supporting Statements
 ### 1. CBRS: "Citizen" as the Core Principle
@@ -72,26 +72,48 @@ The U.S. federal government has invested billions in initiatives like the Rural 
 By centralizing control and excluding community-driven participation, [HIP 0113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) fundamentally opposes the spirit of federal programs designed to enhance rural and last-mile connectivity. These programs prioritize decentralization, local ownership, and innovation—values that are eroded by the top-down control embedded in [HIP 0113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md). Helium’s current trajectory risks becoming a barrier to the government’s mission of achieving universal broadband access, a mission that requires more flexible, community-led, decentralized solutions.
 
 ## This proposal outlines key changes aimed at enhancing network stability, security, and efficiency:
-### Reverse the POC Rewards Rebalancing - outlined in [HIP 0113](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) 
-### EXAMPLE - HIP 0113 Proposed:: 
-#### Current rewards
-|               | Coverage Points (current) | MOBILE Rewards (current)   | % Total Rewards |
-| ------------- | ------------------------- | -------------------------- | --------------- |
-| CBRS          | 26,199,967                | 36,756,229                 | 75.5%           |
-| Wi-Fi         | 8,492,786                 | 11,916,220                 | 24.5%           |
-| Total         | 34,692,753                | 48,672,449                 | 100.0%          |
-#### Proposed Rewards (estimated)
-|               | Coverage Points (estimated) | MOBILE Rewards (estimated) | % Total Rewards | MOBILE Rewards Change   |
-| ------------- | --------------------------- | -------------------------- | --------------- | ----------------------- |
-| CBRS          | 6,549,992                   | 21,193,170                 | 43.5%           | **-42.3%**              |
-| Wi-Fi         | 8,492,786                   | 27,479,279                 | 56.5%           | **+130.6%**             |
-| Total         | 15,042,778                  | 48,672,449                 | 100%            |                         |
+### Reverse Drastic Cuts to CBRS Proof of Coverage Rewards outlined in [HIP 0113](https://github.com/helium/HIP/blob/main/0093-addition-of-wifi-aps-to-mobile-subdao.md) 
+
+#### Rewards Prior to [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md)
+|               | Coverage Points           | % Total Rewards |
+| ------------- | ------------------------- | --------------- |
+| CBRS          | 26,199,967                | 75.5%           |
+| Wi-Fi         | 8,492,786                 | 24.5%           |
+| Total         | 34,692,753                | 100.0%          |
+#### Rewards Post [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md)
+|               | Coverage Points (estimated) | % Total Rewards |
+| ------------- | --------------------------- | --------------- |
+| CBRS          | 6,549,992                   | 43.5%           |
+| Wi-Fi         | 8,492,786                   | 56.5%           | 
+| Total         | 15,042,778                  | 100%            |
 ### Proposed Reversal by this HIP  *Retroactive to HIP 0113 date*
-|               | Coverage Points (estimated) | MOBILE Rewards (estimated) | % Total Rewards | MOBILE Rewards Change   |
-| ------------- | --------------------------- | -------------------------- | --------------- | ----------------------- |
-| CBRS          | 6,549,992                   | 21,193,170                 | 43.5%           | **+42.3%**              |
-| Wi-Fi         | 8,492,786                   | 27,479,279                 | 56.5%           | **-130.6%**             |
-| Total         | 15,042,778                  | 48,672,449                 | 100%            |                         |
+|               | Coverage Points (estimated) | % Total Rewards |
+| ------------- | --------------------------- | --------------- |
+| CBRS          | 26,199,967                  | 75.5%           |
+| Wi-Fi         | 8,492,786                   | 24.5%           | 
+| Total         | 34,692,753                  | 100%            |
+
+### Reversal Changes to Modeled Coverage Points for Outdoor CBRS Radios Outlined in [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) 
+
+|                                          | Tier 1        | Tier 2                     | Tier 3                      | Tier 4           |
+| ---------------------------------------- | ------------- | -------------------------- | --------------------------- | ---------------- |
+| **Potential Signal Power**               | $P > -95 dBm$ | $-95 dBm \ge P > -105 dBm$ | $-105 dBm \ge P > -115 dBm$ | $P \le -115 dBm$ |
+| **Potential Signal Level**               | High          | Medium                     | Low                         | None             |
+| **Estimated coverage points (HIP 113)**  | 4            | 2                          | 1                           | 0                |
+| **Estimated coverage points (HIP 113 Partial Reversal)** | **8**         | **4**                      | **2**                       | **0**            |
+| **Estimated coverage points (HIP 113 Full Reversal)** | **16**         | **8**                      | **4**                       | **0**            |
+
+### Reversal Changes to Modeled Coverage Points for Indoor CBRS Radios Outlined by [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) 
+
+|                                          | Tier 1     | Tier 2             |
+| ---------------------------------------- | ---------- | ------------------ |
+| **Location**                             | Inside hex | All adjacent hexes |
+| **Potential Signal Level**               | High       | Low                |
+| **Estimated coverage points (HIP 113)**  | 100        | 25                |
+| **Estimated coverage points (HIP 113 Partial Reversal)** | **200**     | **50**             |
+| **Estimated coverage points (HIP 113 Full Reversal)** | **400**     | **100**             |
+
+## Drawbacks
 
 ### Reintroduce PoC Validation: 
 Return to the original system where hotspots are responsible for verifying coverage using peer-to-peer signal validation. This could be implemented with a weighted reward system that prioritizes rural deployments where connectivity is most needed. This system will adjust PoC rewards to provide greater incentives for CBRS radios deployed in underserved rural areas. Deployments in densely populated urban areas will be scrutinized for potential manipulation and may receive adjusted rewards accordingly, ensuring fairness and discouraging exploitative practices.
