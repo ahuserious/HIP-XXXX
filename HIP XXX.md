@@ -156,10 +156,9 @@ This concept would give CBRS operators incentive to keep deploying and maintaini
 ### Reintroduce PoC Validation: 
 Return to the original system where hotspots are responsible for verifying coverage using peer-to-peer signal validation. This could be implemented with a weighted reward system that prioritizes rural deployments where connectivity is most needed. This system will adjust PoC rewards to provide greater incentives for CBRS radios deployed in underserved rural areas. Deployments in densely populated urban areas will be scrutinized for potential manipulation and may receive adjusted rewards accordingly, ensuring fairness and discouraging exploitative practices.
 
-[Helium Mobile - December 21, 2022 - 7000 active radios deployed](https://blog.hellohelium.com/you-asked-we-answered/)
-
 ### Multi-Carrier Network Expansion
 Introduce support for multi-carrier approaches, allowing hotspots to interact with multiple carriers. This will enhance network reliability, particularly in areas where a single carrier lacks sufficient coverage. By leveraging partnerships with multiple carriers, we can expand the network's capabilities and provide a more seamless experience for subscribers.
+
 ### Data Offloading Optimization
 Integrate data offloading mechanisms for IoT devices to enable efficient data traffic management. This will provide additional revenue streams for operators and enhance the network's overall utility. Efficient data offloading will help manage network congestion and improve performance.
 
