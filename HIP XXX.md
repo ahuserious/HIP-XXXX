@@ -113,7 +113,45 @@ By centralizing control and excluding community-driven participation, [HIP 0113]
 | **Estimated coverage points (HIP 113 Partial Reversal)** | **200**     | **50**             |
 | **Estimated coverage points (HIP 113 Full Reversal)** | **400**     | **100**             |
 
-## Drawbacks
+### POC Override on Data Transfer Rewards
+Implementing a full reversal on CBRS rewards may not be as feasable if done in a granular fashion alone without a balancing mechanism in place. POC Override proposes a balanced system where POC Rewards decreased by [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) are partially or fully reversed, and data transfer being rewarded only when DT is > POC, with rewards starting when DT is 1 $Mobile over POC in a 24 hour peroid. POC Rewards would then be deducted from the DT rewards and reallocated. The operator is always rewarded the highest of either. This is intended to stabilize POC rewards without the need for both gradual and drastic cuts in order to compensate data transfer, and incentivize CBRS expansion. 
+
+#### Example: Pre [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) / HIP 0113 Full Reversal
+|               | Coverage Points  |
+| ------------- | ---------------- |
+| POC           | 10,000,000       | 
+| DATA          |    500,001       |
+| Rewarded      | 10,500,001       |
+
+#### Example: Post [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md)
+|               | Coverage Points  |
+| ------------- | ---------------- |
+| POC           |  2,500,000       |
+| DATA          |    500,001       | 
+| Rewarded      |  3,500,001       |
+
+#### Example: [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) Partial Reversal with POC Override - POC > Data
+|               | Coverage Points             |
+| ------------- | --------------------------- |
+| POC           |  5,000,000                  |
+| DATA          |  2,000,001                  | 
+| Rewarded      |  5,000,000                 |
+
+#### Example: [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) Partial Reversal with POC Override - Data > POC
+|               | Coverage Points             |
+| ------------- | --------------------------- |
+| POC           |  5,000,000                  |
+| DATA          | 10,000,001                  | 
+| Rewarded      | 10,000,001                  |
+
+#### Example: [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) Full Reversal with POC Override - Data > POC
+|               | Coverage Points             |
+| ------------- | --------------------------- |
+| POC           | 10,000,000                  |
+| DATA          | 10,000,001                  | 
+| Rewarded      | 10,000,001                  |
+
+This concept would give CBRS operators incentive to keep deploying and maintaining equipment by providing optimal POC compensation, whether partially or reversing [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md). Overridden POC credits moved back into the ecosystem solves the steadily declining POC rate unbenounced to token price which declines by new coverage hexes are placed on network. Offering such a system gives new CBRS operators or operators in areas with lower data dransfer a steady on ramp to deployment which is needed to offer both the ecosystem and network utility.
 
 ### Reintroduce PoC Validation: 
 Return to the original system where hotspots are responsible for verifying coverage using peer-to-peer signal validation. This could be implemented with a weighted reward system that prioritizes rural deployments where connectivity is most needed. This system will adjust PoC rewards to provide greater incentives for CBRS radios deployed in underserved rural areas. Deployments in densely populated urban areas will be scrutinized for potential manipulation and may receive adjusted rewards accordingly, ensuring fairness and discouraging exploitative practices.
