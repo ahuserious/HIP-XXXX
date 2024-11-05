@@ -1,4 +1,4 @@
-# HIP XXX: Stabilizing CBRS Radio Deployment Incentives, Multi-Carrier Network Expansion, and PoC Rewards Integrity
+# HIP XXX: Stabilizing CBRS Deployment Incentives, Multi-Carrier Network Expansion, and PoC Rewards Integrity
 
 - Author(s): [Author Names]
 - Start Date: [Date]
