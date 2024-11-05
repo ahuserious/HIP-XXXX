@@ -113,10 +113,10 @@ By centralizing control and excluding community-driven participation, [HIP 0113]
 | **Estimated coverage points (HIP 113 Partial Reversal)** | **200**     | **50**             |
 | **Estimated coverage points (HIP 113 Full Reversal)** | **400**     | **100**             |
 
-### POC Override on Data Transfer Rewards
+### Stabilizing CBRS Incentives via POC Override
 Implementing a full reversal on CBRS rewards may not be as feasable if done in a granular fashion alone without a balancing mechanism in place. POC Override proposes a balanced system where POC Rewards decreased by [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) are partially or fully reversed, and data transfer being rewarded only when DT is > POC, with rewards starting when DT is 1 $Mobile over POC in a 24 hour peroid. POC Rewards would then be deducted from the DT rewards and reallocated. The operator is always rewarded the highest of either. This is intended to stabilize POC rewards without the need for both gradual and drastic cuts in order to compensate data transfer, and incentivize CBRS expansion. 
 
-#### Example: Pre [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) / HIP 0113 Full Reversal
+#### Example: Pre [HIP 113](https://github.com/helium/HIP/blob/main/0113-reward-cbrs-as-experimental.md) / Full Reversal
 |               | Coverage Points  |
 | ------------- | ---------------- |
 | POC           | 10,000,000       | 
